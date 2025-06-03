@@ -46,8 +46,10 @@
           <td>{{i.desc}}</td>
           <td>{{i.date}}</td>
           <td>
+            {% if i.user_id == current_user.id %}
             <a href="/update/{{i.id}}" type="button" class="btn btn-outline-dark btn-sm">Update</a>
             <a href="/delete/{{i.id}}" type="button" class="btn btn-outline-dark btn-sm">Delete</a>
+            {% endif %}
           </td>
         </tr>
 
